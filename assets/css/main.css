@@ -1571,3 +1571,177 @@ left:1rem; top:1rem}
     font-size: 4rem;
     transition: all ease .4s;
 }
+
+.bg-cover-center {
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: 50%; */
+    background-position: center center;
+}
+.breadcum {
+    position: relative;
+    padding: 80px 0;
+    z-index: 1
+}
+
+.breadcum:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--bs-alpha-bg);
+    z-index: -1
+}
+
+.breadcum-content {text-align: center}
+.breadcum-content h2 {
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.breadcum-content ul {
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: var(--color-white);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 25px;
+}
+
+.breadcum-content li~li,
+.breadcum-content ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 0.5rem
+}
+
+.breadcum-content li~li:before {content: "/"}
+.breadcum-content li a {display: block;color: var(--color-white)}
+.breadcum-content li a:hover {color: var(--color-orange)}
+.mega-hover {
+  position: relative;
+  overflow: hidden;
+  transition: all 2s ease;
+}
+
+.mega-hover:after,
+.mega-hover:before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  opacity: 1;
+  z-index: 3;
+  transform: rotate(5deg);
+}
+
+.mega-hover:before {
+  top: -10%;
+  right: 51%;
+  bottom: -10%;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.mega-hover:after {
+  top: 50%;
+  right: -10%;
+  bottom: 50%;
+  left: -10%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.mega-hover img {
+  transition: all 2s ease;
+}
+
+.mega-hover:hover:before {
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 900ms linear;
+}
+
+.mega-hover:hover:after {
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 900ms linear;
+}
+
+.mega-hover:hover img {
+  transform: scale(1.04);
+}
+@keyframes image-hover{
+    0%{
+        width: 100%;
+        opacity: 50%;
+        top: 50%;
+    }
+    100%{
+        height: 150%;
+        opacity: 0;
+        top: 0;
+        top: 0;
+    }
+}
+
+
+@keyframes play-area{
+    0% {
+        transform: scale(1);
+        opacity: 100%;
+    }
+    40% {
+        transform: scale(1.3);
+        opacity: 70%;
+    }
+    70% {
+        transform: scale(1.5);
+        opacity: 40%;
+    }
+    100% {
+        transform: scale(1.7);
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes ri-jello {
+  0% {
+    transform: none;
+  }
+  11.1% {
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+  22.2% {
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+  33.3% {
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+  44.4% {
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+  55.5% {
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+  66.6% {
+    transform: skewX(0.390625deg) skewY(0.390625deg);
+  }
+  77.7% {
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+  }
+  88.8% {
+    transform: skewX(0.09765625deg) skewY(0.09765625deg);
+  }
+  100% {
+    transform: none;
+  }
+}
