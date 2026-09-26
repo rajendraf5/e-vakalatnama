@@ -22,39 +22,43 @@
 </head>
 <body>
  <section class="topbar">
-   <div class="container">
+   <div class="container pt-1 pb-1">
      <div class="row d-flex align-items-center">
        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 d-flex justify-content-center justify-content-lg-start">
           <ul class="toplist">
             <li>
-              <a href="#" class="d-flex align-items-center">
-                <i class="bi bi-telephone-forward me-1"></i>
-                <div><p>1234567890</p></div>
+              <a href="#step" class="d-flex align-items-center">
+                Complete your application by following these six simple steps.
               </a>
             </li>
-            <li>
+            <!-- <li>
               <a href="mailto:rkce@yahoo.com" class="d-flex align-items-center">
                 <i class="bi bi-envelope-paper me-1"></i>
                 <div><p>law@yahoo.com</p></div>
               </a>
-            </li>
+            </li> -->
          </ul>  
        </div>
        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
          <div class="d-flex align-items-center justify-content-lg-end justify-content-center">
-           <div class="social-links d-flex">
+          <select class="select-option">
+            <option>Select Language</option>
+            <option>English</option>
+            <option>Hindi</option>
+          </select>
+           <!-- <div class="social-links d-flex">
               <a href="#"><i class="bi bi-twitter-x"></i></a>
               <a href="#"><i class="bi bi-facebook"></i></a>
               <a href="#"><i class="bi bi-instagram"></i></a>
               <a href="#"><i class="bi bi-linkedin"></i></a>
-            </div>  
+            </div>   -->
          </div>
        </div>
      </div>
    </div>
  </section>
  <header class="headerfixed">
-    <div class="container">
+    <div class="container ">
         <nav class="navbar navbar-expand-lg justify-content-between pt-0 pb-0">
           <a href="#" class="logo"><img src="assets/images/e-logo.webp" alt="" title="" /></a>
             <div class="menu-bar">
@@ -63,11 +67,12 @@
                 <ul>
                   <li><a href="#" class="active">Home</a></li>
                   <li><a href="#">About Us</a></li>
-                  <li><a href="#">Login</a></li>
-                  <li><a href="#">Register</a></li>
-                  <li><a href="#">Forgot Password</a></li>
                   <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Login</a></li>
                 </ul>
+                <div class="ms-2 ms-lg-3">
+                 <a href="#" class="attoyer-btn">Register</a>
+               </div>  
               </div>
             <button class="mobile-menu-btn">
               <span></span>
@@ -85,6 +90,20 @@
       <div class="item slider-one__slider-1 tp-bgimg"><img src="assets/images/banner.jpg"></div>
       <div class="item slider-one__slider-3 tp-bgimg"><img src="assets/images/banner2.jpg"></div>
     </div>  
+    <div class="container">
+      <div class="z-1 d-flex justify-content-center flex-column slider-content">
+        <h2 class="slider-one__title pb-2 pb-lg-3">e-Vakalatnama</h2>
+          <p class="slider-one__text">
+            <a class="thm-btn" href="#">Get Started
+              <i class="bi bi-arrow-right"></i>
+               <span class="hover-btn hover-bx"></span>
+               <span class="hover-btn hover-bx2"></span>
+               <span class="hover-btn hover-bx3"></span>
+               <span class="hover-btn hover-bx4"></span>
+            </a>
+          </p>
+      </div>    
+    </div>
   </section>
   <div class="custom-marquee">
     <div class="logo-grid-row">
@@ -132,8 +151,6 @@
           <h4 class="sub-title">About Us</h4>
           <h2 class="heading-title">e-Vakalatnama</h2>
           <p>The definitive platform for legal professionals to manage, sign, and file digital authorizations with clinical precision and radical clarity.</p>
-          <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt mauris.</p>
-          <!-- <a href="#" class="thm-btn">Read more <i class="bi bi-arrow-right"></i></a> -->
           <a class="thm-btn" href="#">Read more
             <i class="bi bi-arrow-right"></i>
              <span class="hover-btn hover-bx"></span>
@@ -214,7 +231,7 @@
                   <div class="stat-number">
                     <div class="metric-icon"><i class="flaticon-time"></i></div>
                     <span data-purecounter-start="0" data-purecounter-end="99" data-purecounter-duration="3" class="purecounter metric-number"></span>.9%</div>
-                    <span class="metric-label">Uptime</span>
+                    <span class="metric-label">Uptime 24/7 Availability</span>
                 </div>
           </div>      
           <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-6 text-center mb-lg-0 mb-3">
@@ -470,7 +487,72 @@
       </div>
     </div>
   </section>-->    
+ 
+ <div class="pt-5 pb-5" id="step">
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 text-center pb-5">
+          <h4 class="sub-title">6 Step Process</h4>
+          <h2 class="heading-title">Application Process</h2>
+          <div class="divider-line"></div>
+        </div>
+      </div>
+        <div class="stepper-container">
+            <div class="stepper-line"></div>
+            <div class="stepper-progress"></div>
 
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-card">
+                      <div class="step-icon"><i class="bi bi-people-fill"></i></div>
+                      <div class="step-title">Case &amp; Parties</div>
+                    </div>  
+                </div>
+
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-card">
+                      <div class="step-icon"><i class="bi bi-person-badge-fill"></i></div>
+                      <div class="step-title">Advocates</div>
+                    </div>  
+                </div>
+
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-card">
+                      <div class="step-icon"><i class="bi bi-pencil-square"></i></div>
+                      <div class="step-title">Preview &amp; Edit</div>
+                    </div>  
+                </div>
+
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <div class="step-card">
+                      <div class="step-icon"><i class="bi bi-credit-card-fill"></i></div>
+                      <div class="step-title">Pay</div>
+                    </div>  
+                </div>
+
+                <div class="step">
+                    <div class="step-number">05</div>
+                    <div class="step-card">
+                      <div class="step-icon"><i class="bi bi-pen-fill"></i></div>
+                      <div class="step-title">Sign</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">06</div>
+                    <div class="step-card">
+                      <div class="step-icon"><i class="bi bi-check2-circle"></i></div>
+                      <div class="step-title">Done</div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
   <footer>
     <div class="container">
