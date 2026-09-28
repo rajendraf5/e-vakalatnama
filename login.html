@@ -10,7 +10,6 @@
   <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -22,52 +21,45 @@
 </head>
 <body>
  <section class="topbar">
-   <div class="container">
+   <div class="container pt-2 pb-2">
      <div class="row d-flex align-items-center">
        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 d-flex justify-content-center justify-content-lg-start">
-          <ul class="toplist">
+          <ul class="toplist text-lg-start text-center">
             <li>
-              <a href="#" class="d-flex align-items-center">
-                <i class="bi bi-telephone-forward me-1"></i>
-                <div><p>1234567890</p></div>
-              </a>
-            </li>
-            <li>
-              <a href="mailto:rkce@yahoo.com" class="d-flex align-items-center">
-                <i class="bi bi-envelope-paper me-1"></i>
-                <div><p>law@yahoo.com</p></div>
+              <a href="#step" class="d-flex align-items-center">
+                Complete your application by following these six simple steps.
               </a>
             </li>
          </ul>  
        </div>
        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
          <div class="d-flex align-items-center justify-content-lg-end justify-content-center">
-           <div class="social-links d-flex">
-              <a href="#"><i class="bi bi-twitter-x"></i></a>
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
-            </div>  
+          <select class="select-option">
+            <option>English</option>
+            <option>हिन्दी</option>
+          </select>
          </div>
        </div>
      </div>
    </div>
  </section>
  <header class="headerfixed">
-    <div class="container">
+    <div class="container ">
         <nav class="navbar navbar-expand-lg justify-content-between pt-0 pb-0">
           <a href="#" class="logo"><img src="assets/images/e-logo.webp" alt="" title="" /></a>
             <div class="menu-bar">
               <div class="menu-bar-content">
                 <div class="main-menu">
                 <ul>
-                  <li><a href="#">Home</a></li>
+                  <li><a href="#" class="active">Home</a></li>
                   <li><a href="#">About Us</a></li>
-                  <li><a href="#" class="active">Login</a></li>
-                  <li><a href="#">Register</a></li>
-                  <li><a href="#">Forgot Password</a></li>
                   <li><a href="#">Contact Us</a></li>
+                  
                 </ul>
+                <div class="ms-2 ms-lg-3 ms-xl-5 d-lg-flex gap-2">
+                  <a href="#" class="login-btn mb-lg-0 mb-2"><i class="bi bi-box-arrow-in-right me-2"></i>Sign In</a>
+                 <a href="#" class="attoyer-btn"><i class="bi bi-person-fill me-2"></i>Sign Up</a>
+               </div>  
               </div>
             <button class="mobile-menu-btn">
               <span></span>
@@ -80,6 +72,7 @@
     </div>
   </header>
 
+
    <section class="breadcum bg-cover-center" style="background-image: url(assets/images/login.webp);">
     <div class="container">
       <div class="breadcum-content d-flex justify-content-between flex-wrap">
@@ -91,8 +84,126 @@
       </div>
     </div>
   </section>
+
+
+<section class="bg-light p-3 p-md-4 p-xl-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-xxl-12 col-lg-12">
+        <div class="card border-light-subtle shadow-sm">
+          <div class="row g-0">
+            <div class="col-12 col-md-6">
+              <img class="img-fluid rounded-start w-100 h-100 object-fit-cover" loading="lazy" src="assets/images/login-bg.webp" alt="Welcome back you've been missed!">
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+              <div class="col-12 col-lg-11 col-xl-10">
+                <div class="card-body p-3 p-md-4 p-xl-5">
+                  <form action="#!">
+                        <h4>Login to Account</h4>
+                      
+                        <div class="mb-3">
+                          <label class="label-caps text-secondary mb-2">Mobile or Email</label>
+                          <input class="form-control " name="identifier"placeholder="Enter mobile or email" type="text" value="" />
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label class="label-caps text-secondary mb-2">Password</label>
+                            <input class="form-control " type="password" name="password" class="form-control mb-3" placeholder="Enter Password" />
+                        </div>
+      
+                     
+                        <div class="d-grid">
+                          <button class="login-btn" type="submit">Sign In</button>
+                        </div>
+                      
+                    
+                  </form>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-center mt-5">
+                        <a href="#!" class="link-secondary text-decoration-none">Create new account</a>
+                        <a href="#!" class="link-secondary text-decoration-none">Forgot password</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div class="pt-5 pb-5" id="step">
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 text-center pb-5">
+          <h4 class="sub-title">6 Step Process</h4>
+          <h2 class="heading-title">Application Process</h2>
+          <div class="divider-line"></div>
+        </div>
+      </div>
+        <div class="stepper-container">
+            <div class="stepper-line"></div>
+            <div class="stepper-progress"></div>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-card">
+                      <div class="step-icon"><i class="bi bi-people-fill"></i></div>
+                      <div class="step-title">Case &amp; Parties</div>
+                    </div>  
+                </div>
+
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-card">
+                      <div class="step-icon"><i class="bi bi-person-badge-fill"></i></div>
+                      <div class="step-title">Advocates</div>
+                    </div>  
+                </div>
+
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-card">
+                      <div class="step-icon"><i class="bi bi-pencil-square"></i></div>
+                      <div class="step-title">Preview &amp; Edit</div>
+                    </div>  
+                </div>
+
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <div class="step-card">
+                      <div class="step-icon"><i class="bi bi-credit-card-fill"></i></div>
+                      <div class="step-title">Pay</div>
+                    </div>  
+                </div>
+
+                <div class="step">
+                    <div class="step-number">05</div>
+                    <div class="step-card">
+                      <div class="step-icon"><i class="bi bi-pen-fill"></i></div>
+                      <div class="step-title">Sign</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">06</div>
+                    <div class="step-card">
+                      <div class="step-icon"><i class="bi bi-check2-circle"></i></div>
+                      <div class="step-title">Done</div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
    
-  <footer>
+   <footer>
     <div class="container">
       <div class="row">
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-12">
@@ -168,21 +279,6 @@
     </div>
       <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   </footer>
-  <!-- The Modal -->
-<div class="modal" id="myModal">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body p-0">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/9xwazD5SyVg?si=5aXIMuNFWniejfny" title="YouTube video player" frameborder="0" class="border-0 d-block" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-</div>
-
   <script src="assets/js/jquery-3.6.3.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
