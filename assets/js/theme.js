@@ -42,8 +42,8 @@ jQuery(window).scroll(function () {
                 animateOut: 'fadeOut',
                 animateIn: 'fadeIn',
                 active: true,
-                smartSpeed: 5000,
-                autoplay: 7000
+                smartSpeed: 12000,
+                autoplay: 12000
             });
             slideOneWrap.find('.slide-one__left-btn').on('click', function (e) {
                 slideOneCarousel.trigger('next.owl.carousel');
