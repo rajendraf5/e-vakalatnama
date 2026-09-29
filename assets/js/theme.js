@@ -39,10 +39,10 @@ jQuery(window).scroll(function () {
                 margin: 0,
                 dots: true,
                 nav: false,
-                // animateOut: 'slideOutUp',
-                // animateIn: 'fadeUp',
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
                 active: true,
-                smartSpeed: 1000,
+                smartSpeed: 5000,
                 autoplay: 7000
             });
             slideOneWrap.find('.slide-one__left-btn').on('click', function (e) {

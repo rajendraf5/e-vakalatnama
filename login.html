@@ -92,44 +92,99 @@
       <div class="col-12 col-xxl-12 col-lg-12">
         <div class="card border-light-subtle shadow-sm">
           <div class="row g-0">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 order-lg-first order-last">
               <div class="overview-image position-relative mega-hover rounded-0">
                 <img class="img-fluid rounded-start w-100 h-100 object-fit-cover" loading="lazy" src="assets/images/login-bg.webp" alt="Welcome back you've been missed!">
               </div>  
             </div>
-            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+            <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 d-flex align-items-center justify-content-center order-lg-last order-first">
               <div class="col-12 col-lg-11 col-xl-10">
-                <div class="card-body">
-                  <form action="#!" class="login-form">
-                      <h3 class="fw-bold pb-2 pb-lg-4">Login to Account</h3>
-                      <div class="mb-3">
-                        <label class="form-label">Mobile or Email</label>
-                        <input class="form-control" name="identifier"placeholder="Enter mobile or email" type="text" value="" />
-                      </div>
-
-                      <div class="mb-3">
-                        <label class="form-label">Password</label>
-                        <input class="form-control" type="password" name="password" placeholder="Enter Password" />
-                      </div>
-
-                      <div class="row d-flex flex-wrap justify-content-between mt-4">
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-12">
-                          <a type="button" class="login-btn w-100 py-3 text-center" type="submit">Sign In</a>
-                        </div> 
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-12"> 
-                          <a href="#" class="attoyer-btn py-3 text-center w-100">Login with OTP</a>
-                        </div>  
-                      </div>
-                      
-                    
-                  </form>
- 
-                      <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-center mt-3">
-                        <a href="#!" class="link-secondary text-decoration-none">Create new account</a>
-                        <a href="#!" class="link-secondary text-decoration-none">Forgot password</a>
-                      </div>
+                  <div class="card-body">
+                    <div class="mb-4">
+                      <h3 class="fw-bold mb-2">Login to Account</h3>
+                      <p class="text-secondary mb-0">Enter your registered mobile number or email to continue</p>
                     </div>
-                 
+
+                    <form action="#!" class="login-form">
+                      <div class="mb-4">
+                        <label for="identifier" class="form-label fw-semibold">Mobile or Email</label>
+                        
+
+                          <input
+                            id="identifier"
+                            class="form-control"
+                            name="identifier"
+                            placeholder="Enter mobile or email"
+                            type="text"
+                            autocomplete="username"
+                          />
+                       
+                      </div>
+
+                      <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <label for="password" class="form-label fw-semibold mb-0">Password</label>
+                          <a href="#!" class="small text-decoration-none text-primary fw-semibold">
+                            Forgot Password?
+                          </a>
+                        </div>
+
+                        <div class="input-group input-group-lg">
+                          
+                          <input
+                            id="password"
+                            class="form-control border-start-0 border-end-0"
+                            type="password"
+                            name="password"
+                            placeholder="Enter password"
+                            autocomplete="current-password"
+                          />
+                          <button
+                            type="button"
+                            class="btn btn-light border border-start-0"
+                            onclick="togglePassword()"
+                            aria-label="Show password">
+                            <i id="passwordIcon" class="bi bi-eye text-secondary"></i>
+                          </button>
+                        </div>
+                      </div>
+
+
+                      <div class="form-check mb-4">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="rememberMe"
+                        />
+                        <label class="form-check-label text-secondary" for="rememberMe">Remember me</label>
+                      </div>
+
+                      <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                          <button type="submit" class="btn login-btn w-100 py-3 fw-semibold">
+                            <i class="bi bi-box-arrow-in-right me-2"></i>Sign In
+                          </button>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                          <a href="#!"class="btn attoyer-btn w-100 py-3 fw-semibold">
+                            <i class="bi bi-phone me-2"></i>Login with OTP
+                          </a>
+                        </div>
+                      </div>
+                    </form>
+
+                    <div class="d-flex align-items-center my-4">
+                      <div class="flex-grow-1 border-top"></div>
+                      <span class="px-3 text-secondary small">OR</span>
+                      <div class="flex-grow-1 border-top"></div>
+                    </div>
+
+                    <div class="text-center">
+                      <span class="text-secondary">Don't have an account?</span>
+                      <a href="#!" class="text-primary fw-semibold text-decoration-none ms-1">Create New Account</a>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>
@@ -223,5 +278,21 @@
   <script src="assets/js/owl.carousel.min.js"></script>
   <script src="assets/js/easing.min.js"></script>
   <script src="assets/js/theme.js"></script>
+  <script>
+  function togglePassword() {
+    const password = document.getElementById("password");
+    const icon = document.getElementById("passwordIcon");
+
+    if (password.type === "password") {
+      password.type = "text";
+      icon.classList.remove("bi-eye");
+      icon.classList.add("bi-eye-slash");
+    } else {
+      password.type = "password";
+      icon.classList.remove("bi-eye-slash");
+      icon.classList.add("bi-eye");
+    }
+  }
+</script>
 </body>
 </html>
