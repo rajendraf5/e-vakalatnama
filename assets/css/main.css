@@ -27,6 +27,7 @@
   --overlay-mix-blend-mode: initial;
   --footer-bg:#090b0f;
   --bs-top-bg:#090b0f;
+  --menu-color:#fff;
 }
 body {color: var(--default-color);background-color: var(--color-white); font-family: var(--default-font);}
 a {
@@ -73,7 +74,26 @@ h6 {
 .social-list li{display: inline-flex; gap: 0.5rem}
 .social-list li a{display: flex; align-items: center; justify-content: center; color: var(--color-white); line-height: normal;}*/
 
-header{transition: var(--transition-5); background: var(--header-bg); /*border-radius: 60px 60px 0px 0px*/}
+header{transition: var(--transition-5); /*background: var(--header-bg); border-radius: 60px 60px 0px 0px*/
+  /* position: absolute;
+    left: 0;
+    right: 0;
+    width: auto;
+    z-index: 11;*/
+    background: linear-gradient(179deg, rgb(0 0 0) 0%, rgb(0 0 0) 100%);
+    }
+.slider-one:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 14%;
+    background: linear-gradient(180deg, rgb(0 0 0) 0%, rgb(0 0 0 / 0%) 100%);
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    z-index: 2;
+}    
 .custom-marquee {
     overflow: hidden;
     white-space: nowrap;
@@ -180,7 +200,7 @@ header{transition: var(--transition-5); background: var(--header-bg); /*border-r
 .menu-bar .main-menu ul a {
     display: flex;
     font-weight: 600;
-    color: var(--bs-default-bg);
+    color: var(--menu-color);
     /*font-size: 14px;*/
     text-transform: uppercase;
     justify-content: space-between;
@@ -533,7 +553,7 @@ header{transition: var(--transition-5); background: var(--header-bg); /*border-r
     transition: .4s;
     left: 0;
     border-radius: 0.5rem;
-    background:var(--theme-color);
+    background:var(--color-black);
     transform: translate(100%, 90%);
     z-index: -1;
 }
@@ -989,7 +1009,7 @@ footer{padding-top: 2.5rem;background: var(--footer-bg);}
 
 .slider-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     color: var(--color-white);
     animation-name: fadeInUp;
     animation-duration: 1s;
@@ -1050,6 +1070,7 @@ footer{padding-top: 2.5rem;background: var(--footer-bg);}
     .fo-logo img {max-height: 25px;}
 }
 
+.bg-theme{background:#080a15;}
 .parallex {
       position: relative;
       width: 100%;
