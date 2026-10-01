@@ -21,6 +21,7 @@
   --bs-default-bg:#19232D;
   --bs-border-color:#323232;
   --menu-bg:#252c5a;
+  --hamburger-menu:#fff;
   --bs-alpha-bg:rgb(0 0 0 / 50%);
   --theme-color: #162542;
   --bs-color-default:#1c92f5;
@@ -80,6 +81,8 @@ header{transition: var(--transition-5); /*background: var(--header-bg); border-r
     right: 0;
     width: auto;
     z-index: 11;*/
+    position: relative;
+    z-index: 3;
     background: linear-gradient(179deg, rgb(0 0 0) 0%, rgb(0 0 0) 100%);
     }
 .slider-one:before {
@@ -182,6 +185,8 @@ header{transition: var(--transition-5); /*background: var(--header-bg); border-r
 .menu-bar {
     position: relative;
     z-index: 2;
+    display: flex;
+    align-items: center;
     /*border-top:1px solid #dee0e7;*/
 }
 
@@ -252,7 +257,7 @@ header{transition: var(--transition-5); /*background: var(--header-bg); border-r
     position: absolute;
     width: 30px;
     height: 24px;
-    background: var(--color-tr);
+    background: transparent;
     border: 0;
     padding: 8px;
     top: -10px;
@@ -293,7 +298,7 @@ header{transition: var(--transition-5); /*background: var(--header-bg); border-r
     height: 2px;
     left: 0;
     border-radius: 10px;
-    background: #000;
+    background: var(--color-white);
     transition: all .4s ease
 }
 .menu-bar .mobile-menu-btn span:first-child {top: 0}
@@ -365,13 +370,13 @@ header{transition: var(--transition-5); /*background: var(--header-bg); border-r
     color:var(--color-white);
 }
 
-.menu-bar .mobile-menu .main-manu a i {
+/*.menu-bar .mobile-menu .main-manu a i {
     position: absolute;
     top: 11px;
     right: 18px;
     transition: all .4s ease;
     transform: rotate(90deg);
-}
+}*/
 
 .menu-bar .mobile-menu .main-manu a.active {color: var(--theme-color)}
 
@@ -531,7 +536,7 @@ header{transition: var(--transition-5); /*background: var(--header-bg); border-r
 }
 .login-btn {
     background: #ddd;
-    color: var(--color-black);
+    color: var(--color-black) !important;
     padding: 10px 16px;
     font-weight: 600;
     text-transform: uppercase;
@@ -1062,12 +1067,28 @@ footer{padding-top: 2.5rem;background: var(--footer-bg);}
 
 
 
+iframe.skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+}
+#goog-gt-tt,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+body {
+    top: 0px !important;
+    position: static !important;
+}
+
 @media(min-width: 992px){
     .fo-logo img {max-height: 65px;}
 }
 @media(max-width: 991px){
-    .logo img {height: 60px;}
+    .logo img {height: 44px;}
     .fo-logo img {max-height: 25px;}
+    header{position: relative; z-index: 6}
 }
 
 .bg-theme{background:#080a15;}
@@ -1102,6 +1123,7 @@ footer{padding-top: 2.5rem;background: var(--footer-bg);}
     padding: 1.5rem;
     border-radius: 0.25rem;
     transition: var(--transition-5);
+    height: 100%;
     background: rgba(255, 255, 255, 0.02);
 }
 
