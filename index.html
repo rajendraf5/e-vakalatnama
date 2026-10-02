@@ -43,6 +43,23 @@
      </div>
    </div>
  </section> -->
+ <ul class="d-flex gap-1 color-list">
+    <li class="theme-black"><a href="#" id="blackBtn" aria-label="Dark theme" class="active2"></a></li>
+    <li class="theme-green"><a href="#" id="greenBtn" aria-label="Greeen theme"></a></li>
+    <li class="theme-grey"><a href="#" id="greyBtn" aria-label="grey theme"></a></li>
+    <li class="theme-blue"><a href="#" id="blueBtn" aria-label="blue theme"></a></li>
+    <li class="theme-orange"><a href="#" id="orangeBtn" aria-label="orange theme"></a></li>
+    <!-- <li class="theme-purple"><a href="#" id="purpleBtn" aria-label="purple theme"></a></li>
+    <li class="theme-red"><a href="#" id="redBtn" aria-label="red theme"></a></li> -->
+    <li class="theme-teal"><a href="#" id="tealBtn" aria-label="teal theme"></a></li>
+    <li class="theme-sky"><a href="#" id="skyBtn" aria-label="sky theme"></a></li>
+    <li class="theme-rose"><a href="#" id="roseBtn" aria-label="rose theme"></a></li>
+    <li class="theme-lavender"><a href="#" id="lavenderBtn" aria-label="lavender theme"></a></li>
+    <li class="theme-mint"><a href="#" id="mintBtn" aria-label="mint theme"></a></li>
+    <!-- <li class="theme-peach"><a href="#" id="peachBtn" aria-label="peach theme"></a></li> -->
+    <li class="theme-aqua"><a href="#" id="aquaBtn" aria-label="aqua theme"></a></li>
+    <li class="theme-yellow"><a href="#" id="yellowBtn" aria-label="yellow theme"></a></li>
+ </ul>
  <header class="headerfixed">
     <div class="container">
         <nav class="navbar navbar-expand-lg justify-content-lg-between pt-0 pb-0">
@@ -57,13 +74,8 @@
                   <li><a href="#">Faqs</a></li>
                 </ul>
                 <div class="ms-2 ms-lg-1 ms-xl-5 d-lg-flex gap-2">
-                  <a href="#" class="login-btn mb-lg-0 mb-2"><i class="bi bi-box-arrow-in-right me-2"></i>Login</a>
+                  <a href="login.html" class="login-btn mb-lg-0 mb-2"><i class="bi bi-box-arrow-in-right me-2"></i>Login</a>
                   <a href="#" class="attoyer-btn mb-lg-0 mb-2"><i class="bi bi-person-fill me-2"></i>Sign Up</a>
-                  <!-- <a href="#" class="attoyer-btn"><i class="bi bi-globe"></i></a> -->
-                  <!--<select class="select-option">
-                    <option>English</option>
-                    <option>हिन्दी</option>
-                  </select> -->
                </div>  
               </div>
             <button class="mobile-menu-btn">
@@ -72,57 +84,38 @@
               <span></span>
           </button>
         </div>
-<!--           <div class="attoyer-btn ms-2" style="cursor: pointer;" 
-     onclick="toggleTranslate()"
-     title="Translate Hindi / English">
-    <span>अ/A</span>
-</div>
-
-<div id="google_translate_element" style="display:none;"></div>        -->
-<div class="dropdown notranslate" translate="no">
-
-    <button
-        class="attoyer-btn ms-2 d-flex align-items-center gap-2"
-        type="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-    >
-        <i class="bi bi-globe2"></i>
-
-        <span id="currentLanguage">EN</span>
-
-        <i class="bi bi-chevron-down small"></i>
-    </button>
-
-    <ul class="dropdown-menu dropdown-menu-end shadow-sm" style="min-width: 100px;">
-
-        <li>
+        <div class="dropdown notranslate" translate="no">
             <button
+                class="attoyer-btn ms-2 d-flex align-items-center gap-2"
                 type="button"
-                class="dropdown-item notranslate"
-                translate="no"
-                onclick="changeLanguage('en', 'EN')"
-            >
-                EN
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bi bi-globe2"></i>
+                <span id="currentLanguage">EN</span>
+                <i class="bi bi-chevron-down small"></i>
             </button>
-        </li>
 
-        <li>
-            <button
-                type="button"
-                class="dropdown-item notranslate"
-                translate="no"
-                onclick="changeLanguage('hi', 'HI')"
-            >
-                HI
-            </button>
-        </li>
+            <ul class="dropdown-menu dropdown-menu-end lang-width">
+                <li>
+                    <button type="button"
+                        class="dropdown-item notranslate"
+                        translate="no"
+                        onclick="changeLanguage('en', 'EN')"
+                    >EN</button>
+                </li>
 
-    </ul>
-</div>
-<div id="google_translate_element"
-     style="position:absolute; left:-9999px;">
-</div>
+                <li>
+                    <button
+                        type="button"
+                        class="dropdown-item notranslate"
+                        translate="no"
+                        onclick="changeLanguage('hi', 'HI')">
+                        HI
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div id="google_translate_element"style="position:absolute; left:-9999px;display: none;"></div>
 
        </div> 
       </nav>
@@ -306,7 +299,7 @@
       <div class="row">
         <div class="col-lg-12 d-flex flex-column align-items-center pb-2 pt-4">
           <h4 class="sub-title d-flex align-items-center gap-2">Why Digital Vakalatnama</h4>
-          <h2 class="heading-title text-white pt-2 pb-2">Infallible Legal Integrity</h2>
+          <h2 class="heading-title color-secondary pt-2 pb-2">Infallible Legal Integrity</h2>
           <!-- <div class="divider-line"></div> -->
         </div>
       </div>
@@ -570,6 +563,7 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script type="text/javascript"src="assets/js/theme-color.js"></script>
   <script src="assets/js/index.min.js"></script>
   <script src="assets/js/owl.carousel.min.js"></script>
   <script src="assets/js/easing.min.js"></script>

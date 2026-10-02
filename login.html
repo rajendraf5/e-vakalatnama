@@ -20,32 +20,9 @@
   <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
 </head>
 <body>
- <section class="topbar">
-   <div class="container pt-2 pb-2">
-     <div class="row d-flex align-items-center">
-       <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 d-flex justify-content-center justify-content-lg-start">
-          <ul class="toplist text-lg-start text-center">
-            <li>
-              <a href="#step" class="d-flex align-items-center">
-                Complete your application by following these six simple steps.
-              </a>
-            </li>
-         </ul>  
-       </div>
-       <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
-         <div class="d-flex align-items-center justify-content-lg-end justify-content-center">
-          <select class="select-option">
-            <option>English</option>
-            <option>हिन्दी</option>
-          </select>
-         </div>
-       </div>
-     </div>
-   </div>
- </section>
  <header class="headerfixed">
-    <div class="container ">
-        <nav class="navbar navbar-expand-lg justify-content-between pt-0 pb-0">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg justify-content-lg-between pt-0 pb-0">
           <a href="#" class="logo"><img src="assets/images/e-logo.webp" alt="" title="" /></a>
             <div class="menu-bar">
               <div class="menu-bar-content">
@@ -54,11 +31,11 @@
                   <li><a href="#" class="active">Home</a></li>
                   <li><a href="#">About Us</a></li>
                   <li><a href="#">Contact Us</a></li>
-                  
+                  <li><a href="#">Faqs</a></li>
                 </ul>
                 <div class="ms-2 ms-lg-1 ms-xl-5 d-lg-flex gap-2">
-                  <a href="#" class="login-btn mb-lg-0 mb-2"><i class="bi bi-box-arrow-in-right me-2"></i>Login</a>
-                 <a href="#" class="attoyer-btn"><i class="bi bi-person-fill me-2"></i>Sign Up</a>
+                  <a href="login.html" class="login-btn mb-lg-0 mb-2"><i class="bi bi-box-arrow-in-right me-2"></i>Login</a>
+                  <a href="#" class="attoyer-btn mb-lg-0 mb-2"><i class="bi bi-person-fill me-2"></i>Sign Up</a>
                </div>  
               </div>
             <button class="mobile-menu-btn">
@@ -67,7 +44,40 @@
               <span></span>
           </button>
         </div>
-       </div>   
+        <div class="dropdown notranslate" translate="no">
+            <button
+                class="attoyer-btn ms-2 d-flex align-items-center gap-2"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bi bi-globe2"></i>
+                <span id="currentLanguage">EN</span>
+                <i class="bi bi-chevron-down small"></i>
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-end lang-width">
+                <li>
+                    <button type="button"
+                        class="dropdown-item notranslate"
+                        translate="no"
+                        onclick="changeLanguage('en', 'EN')"
+                    >EN</button>
+                </li>
+
+                <li>
+                    <button
+                        type="button"
+                        class="dropdown-item notranslate"
+                        translate="no"
+                        onclick="changeLanguage('hi', 'HI')">
+                        HI
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div id="google_translate_element"style="position:absolute; left:-9999px;display: none;"></div>
+
+       </div> 
       </nav>
     </div>
   </header>
@@ -96,10 +106,10 @@
               <div class="profile-card h-100 shadow-lg w-100 overview-image loginbg  position-relative rounded-0">
                 
                   <img src="assets/images/login-bg.webp" alt="" title="">   
-                  <div class="text-white position-absolute login-content flex-column text-center p-4">
+                  <!-- <div class="text-white position-absolute login-content flex-column text-center p-4">
                     <h2 class="fw-bold">Welcome to e-Vakalatnama</h2>
                     <p>The modern platform for legal professionals to manage sign and file digital authorizations with precision confidence and clarity.</p>
-                  </div>
+                  </div> -->
               </div>
             </div>
             <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 d-flex align-items-center justify-content-center order-lg-last order-first">
@@ -109,18 +119,11 @@
                       <h3 class="fw-bold mb-2">Login to Account</h3>
                       <p class="text-secondary mb-0">Enter your registered mobile number or email to continue</p>
                     </div>
-
-                    <form action="#" class="login-form">
+                    <form method="post" action="" class="login-form">
                       <div class="mb-4">
                         <label for="identifier" class="form-label fw-semibold">Mobile or Email</label>
-                          <input
-                            id="identifier"
-                            class="form-control"
-                            name="identifier"
-                            placeholder="Enter mobile or email"
-                            type="text"
-                          />
-                       
+                        <input class="form-control" name="identifier" placeholder="Enter mobile or email" type="text" value="" required="required" />
+                       <div class="invalid-feedback">Please enter your mobile or email.</div>
                       </div>
                       <div class="mb-3">
                         <div class="d-flex justify-content-between align-items-center mb-2">
@@ -137,7 +140,9 @@
                             name="password"
                             placeholder="Enter password"
                             autocomplete="current-password"
+                            required="required"
                           />
+                          <div class="invalid-feedback">Please enter your password.</div>
                         </div>
                       </div>
 
@@ -147,6 +152,7 @@
                           class="form-check-input"
                           type="checkbox"
                           id="rememberMe"
+                          required="required"
                         />
                         <label class="form-check-label" for="rememberMe">Remember me</label>
                       </div>
@@ -268,5 +274,5 @@
   <script src="assets/js/owl.carousel.min.js"></script>
   <script src="assets/js/easing.min.js"></script>
   <script src="assets/js/theme.js"></script>
-</body>
+ </body>
 </html>
