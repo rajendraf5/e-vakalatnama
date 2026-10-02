@@ -120,7 +120,7 @@
   --bs-card: rgb(249 115 22 / 30%);
   --bs-card-icon:#f97316;
   --bd-card-hover-border:rgb(198 69 13 / 75%);
-  --bs-primary-bg: #fff7ed;
+  --bs-primary-bg: #f97316;
   --bs-card-bg: linear-gradient(135deg, #fff7ed, #ffedd5);
   --step-shadow: 0 4px 16px rgba(249, 115, 22, 0.20);
   --step-shadow-hover: 0 8px 25px rgba(249, 115, 22, 0.35);
@@ -145,7 +145,7 @@
   --bs-card:rgb(99 115 138 / 30%);
   --bs-card-icon:#354863;
   --bd-card-hover-border:rgb(82 97 118 / 50%);
-  --bs-primary-bg: #e8fefa;
+  --bs-primary-bg: #505f74;
   --bs-card-bg: linear-gradient(135deg, #f8fafc, #e2e8f0);
   --step-shadow: 0 4px 16px rgba(71, 85, 105, 0.20);
   --step-shadow-hover: 0 8px 25px rgba(71, 85, 105, 0.35);
@@ -228,7 +228,7 @@
   --bs-card: rgba(204, 251, 241, 0.85);
   --bs-card-icon:#059669;
   --bd-card-hover-border:rgb(5 150 105 / 75%);
-  --bs-primary-bg: #f0fdfa;
+  --bs-primary-bg: #0f766e;
   --bs-card-bg: linear-gradient(135deg, #f0fdfa, #ccfbf1);
   --step-shadow: 0 4px 16px rgba(13, 148, 136, 0.16);
   --step-shadow-hover: 0 8px 25px rgba(13, 148, 136, 0.28);
@@ -258,7 +258,7 @@
   --bs-card: rgb(3 115 175 / 30%);
    --bs-card-icon:#059669;
     --bd-card-hover-border:rgb(3 115 175 / 75%);
-  --bs-primary-bg: #f0f9ff;
+  --bs-primary-bg: #0369a1;
   --bs-card-bg: linear-gradient(135deg, #f0f9ff, #e0f2fe);
   --step-shadow: 0 4px 16px rgba(2, 132, 199, 0.16);
   --step-shadow-hover: 0 8px 25px rgba(2, 132, 199, 0.28);
@@ -288,7 +288,7 @@
   --bs-card: rgb(203 22 64 / 30%);
    --bs-card-icon:#be123c;
     --bd-card-hover-border:rgb(203 22 64 / 75%);
-  --bs-primary-bg: #fff1f2;
+  --bs-primary-bg: #be123c;
   --bs-card-bg: linear-gradient(135deg, #fff1f2, #ffe4e6);
   --step-shadow: 0 4px 16px rgba(225, 29, 72, 0.15);
   --step-shadow-hover: 0 8px 25px rgba(225, 29, 72, 0.28);
@@ -317,9 +317,9 @@
   --menu-color: #fff;
   --color-primary: #8b5cf6;
   --bs-card: rgb(130 71 241 / 30%);
-   --bs-card-icon:#7c3aed;
-    --bd-card-hover-border:rgb(130 71 241 / 75%);
-  --bs-primary-bg: #faf5ff;
+  --bs-card-icon:#7c3aed;
+  --bd-card-hover-border:rgb(130 71 241 / 75%);
+  --bs-primary-bg: #7c3aed;
   --bs-card-bg: linear-gradient(135deg, #faf5ff, #ede9fe);
   --step-shadow: 0 4px 16px rgba(139, 92, 246, 0.15);
   --step-shadow-hover: 0 8px 25px rgba(139, 92, 246, 0.28);
@@ -350,7 +350,7 @@
   --bs-card: rgba(209, 250, 229, 0.9);
    --bs-card-icon:#047857;
     --bd-card-hover-border:rgb(5 150 105 / 75%);
-  --bs-primary-bg: #ecfdf5;
+  --bs-primary-bg: #34d399;
   --bs-card-bg: linear-gradient(135deg, #ecfdf5, #d1fae5);
   --step-shadow: 0 4px 16px rgba(16, 185, 129, 0.15);
   --step-shadow-hover: 0 8px 25px rgba(16, 185, 129, 0.28);
@@ -410,7 +410,7 @@
   --bs-card: rgb(7 159 191 / 30%);
    --bs-card-icon:#0891b2;
     --bd-card-hover-border:rgb(7 159 191 / 75%);
-  --bs-primary-bg: #ecfeff;
+  --bs-primary-bg: #22d3ee;
   --bs-card-bg: linear-gradient(135deg, #ecfeff, #cffafe);
   --step-shadow: 0 4px 16px rgba(6, 182, 212, 0.15);
   --step-shadow-hover: 0 8px 25px rgba(6, 182, 212, 0.28);
@@ -441,7 +441,7 @@
   --bs-card: rgba(254, 249, 195, 0.9);
    --bs-card-icon:#ca8a04;
     --bd-card-hover-border:rgba(254, 249, 195, 75);
-  --bs-primary-bg: #fefce8;
+  --bs-primary-bg: #facc15;
   --bs-card-bg: linear-gradient(135deg, #fefce8, #fef9c3);
   --step-shadow: 0 4px 16px rgba(234, 179, 8, 0.16);
   --step-shadow-hover: 0 8px 25px rgba(234, 179, 8, 0.3);
