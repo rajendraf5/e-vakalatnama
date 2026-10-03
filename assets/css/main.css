@@ -62,6 +62,7 @@
   --cta-color:rgb(82 97 118);
   --cta-after:radial-gradient(circle, rgb(239 239 239 / 15%) 0%, #ffffff00 70%);
   --cta-before:radial-gradient(circle, rgb(127 141 160) 0%, transparent 70%);
+  --stat-border:#333030;
 }
 
 
@@ -93,6 +94,7 @@
   --cta-color:rgb(48 121 222);
   --cta-after:radial-gradient(circle, rgb(1 53 179) 0%, #ffffff00 70%);
   --cta-before:radial-gradient(circle, rgb(24 104 189) 0%, transparent 70%);
+  --stat-border:#333030;
 }
 
 
@@ -2237,9 +2239,9 @@ left:1rem; top:1rem}
     .cta-stats {
       display: flex;
       gap: 32px;
-      margin-top: 28px;
-      padding-top: 24px;
-      border-top: 1px solid var(--stat-label);
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--stat-border);
     }
 
     .stat-item {
