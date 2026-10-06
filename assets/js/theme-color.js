@@ -3,8 +3,8 @@ const buttons = [
   // "lightBtn",
   // "blackBtn",
   // "greenBtn",
-  "greyBtn",
   "blueBtn",
+  "greyBtn",
   // "orangeBtn",
   // "purpleBtn",
   // "redBtn",
@@ -26,8 +26,8 @@ buttons.forEach(id => {
     // if (id === "lightBtn")  document.documentElement.setAttribute("data-bs-theme", "light");
     // if (id === "blackBtn")   document.documentElement.setAttribute("data-bs-theme", "dark");
     // if (id === "greenBtn")  document.documentElement.setAttribute("data-bs-theme", "green");
-    if (id === "greyBtn") document.documentElement.setAttribute("data-bs-theme", "grey");
     if (id === "blueBtn")   document.documentElement.setAttribute("data-bs-theme", "blue");
+    if (id === "greyBtn") document.documentElement.setAttribute("data-bs-theme", "grey");
     // if (id === "orangeBtn") document.documentElement.setAttribute("data-bs-theme", "orange");
     // if (id === "purpleBtn") document.documentElement.setAttribute("data-bs-theme", "purple");
     // if (id === "redBtn") document.documentElement.setAttribute("data-bs-theme", "red");

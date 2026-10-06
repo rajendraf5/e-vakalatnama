@@ -39,6 +39,49 @@
   --color-secondary: #333333;
   --menu-bg: #fff;
   --menu-color: #fff;
+  --color-primary: #2563eb;
+  --bs-card: rgba(219, 234, 254, 0.85);
+  --bs-card-icon:#3F51B5;
+  --bd-card-hover-border:rgb(5 150 105 / 75%);
+  --bs-primary-bg: #2045a4;
+  --bs-card-bg: linear-gradient(135deg, #eff6ff, #dbeafe);
+  --step-shadow: 0 4px 16px rgba(37, 99, 235, 0.20);
+  --step-shadow-hover: 0 8px 25px rgba(37, 99, 235, 0.35);
+  --step-number-bg: linear-gradient(135deg, #2563eb, #1d4ed8);
+  --header-bg: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%);
+  --bs-card-hover: #1e3a8a;
+  --sub-title: #1d4ed8;
+  --bs-card-text-color: #111827;
+  --bg-theme:#bfe2fd;
+  --surface-color: linear-gradient(135deg, #3F51B5 0%, #3F51B5 100%);
+  --footer-h4-text: #fff;
+  --footer-bg: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%);
+  --copyright: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%);
+  --stat-label:#c9e3fd;
+  --cta-border:rgb(104 156 231);
+  --cta-color:rgb(48 121 222);
+  --cta-after:radial-gradient(circle, rgb(1 53 179) 0%, #ffffff00 70%);
+  --cta-before:radial-gradient(circle, rgb(24 104 189) 0%, transparent 70%);
+  --stat-border:rgb(255 255 255 / 20%);
+  --slider-bg:linear-gradient(135deg, #263a9d 0%, #0d3490 100%);
+  --slider-after:linear-gradient(180deg, #2047a9, rgb(0 0 0 / 0%) 100%);
+  --focus-color:#3F51B5;
+  --login-bg-color:linear-gradient(135deg, rgb(34 86 206) 0%, rgb(1 20 75 / 90%) 100%);
+  --input-bg:#fff;
+  --gradient-light:linear-gradient(135deg, #e2e8f0 30%, color-mix(in srgb, #e2e8f0, transparent 0%) 20%);
+}
+
+
+
+/*[data-bs-theme=blue] {
+  
+}*/
+
+
+[data-bs-theme=grey] {
+  --color-secondary: #333333;
+  --menu-bg: #fff;
+  --menu-color: #fff;
   --color-primary: #64748b;
   --bs-card:rgb(99 115 138 / 30%);
   --bs-card-icon:#354863;
@@ -67,70 +110,9 @@
   --slider-after:linear-gradient(180deg, rgb(67 81 102) 0%, rgb(0 0 0 / 0%) 100%);
   --focus-color:#354863;
   --login-bg-color:linear-gradient(135deg, rgba(13,27,42,0.95) 0%, rgba(29,53,87,0.96) 100%);
-  --input-bg:#c4d4ea;
+  --input-bg:#fff;
+  --gradient-light:linear-gradient(135deg, #e2e8f0 30%, color-mix(in srgb, #e2e8f0, transparent 0%) 20%);
 }
-
-
-
-[data-bs-theme=blue] {
-  --color-secondary: #333333;
-  --menu-bg: #fff;
-  --menu-color: #fff;
-  --color-primary: #2563eb;
-  --bs-card: rgba(219, 234, 254, 0.85);
-  --bs-card-icon:#3F51B5;
-  --bd-card-hover-border:rgb(5 150 105 / 75%);
-  --bs-primary-bg: #2045a4;
-  --bs-card-bg: linear-gradient(135deg, #eff6ff, #dbeafe);
-  --step-shadow: 0 4px 16px rgba(37, 99, 235, 0.20);
-  --step-shadow-hover: 0 8px 25px rgba(37, 99, 235, 0.35);
-  --step-number-bg: linear-gradient(135deg, #2563eb, #1d4ed8);
-  --header-bg: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%);
-  --bs-card-hover: #1e3a8a;
-  --sub-title: #1d4ed8;
-  --bs-card-text-color: #111827;
-  --bg-theme:#bfe2fd;
-  --surface-color: linear-gradient(135deg, #3F51B5 0%, #3F51B5 100%);
-  --footer-h4-text: #fff;
-  --footer-bg: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%);
-  --copyright: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%);
-  --stat-label:#c9e3fd;
-  --cta-border:rgb(104 156 231);
-  --cta-color:rgb(48 121 222);
-  --cta-after:radial-gradient(circle, rgb(1 53 179) 0%, #ffffff00 70%);
-  --cta-before:radial-gradient(circle, rgb(24 104 189) 0%, transparent 70%);
-  --stat-border:rgb(255 255 255 / 20%);
-  --slider-bg:linear-gradient(135deg, #263a9d 0%, #0d3490 100%);
-  --slider-after:linear-gradient(180deg, #2047a9, rgb(0 0 0 / 0%) 100%);
-  --focus-color:#3F51B5;
-  --login-bg-color:linear-gradient(135deg, rgb(34 86 206) 0%, rgb(5 27 89 / 90%) 100%);
-  --input-bg:#b8e6fb;
-}
-
-
-/*[data-bs-theme=grey] {
-  --color-secondary: #333333;
-  --menu-bg: #fff;
-  --menu-color: #fff;
-  --color-primary: #64748b;
-  --bs-card:rgb(99 115 138 / 30%);
-  --bs-card-icon:#354863;
-  --bd-card-hover-border:rgb(82 97 118 / 50%);
-  --bs-primary-bg: #505f74;
-  --bs-card-bg: linear-gradient(135deg, #f8fafc, #e2e8f0);
-  --step-shadow: 0 4px 16px rgba(71, 85, 105, 0.20);
-  --step-shadow-hover: 0 8px 25px rgba(71, 85, 105, 0.35);
-  --step-number-bg: linear-gradient(135deg, #64748b, #475569);
-  --header-bg: linear-gradient(135deg, #475569 0%, #64748b 100%);
-  --bs-card-hover: #334155;
-  --sub-title: #475569;
-  --bs-card-text-color: #1e293b;
-  --bg-theme: #f8fafc;
-  --surface-color: linear-gradient(135deg, #354863 0%, #334155 100%);
-  --footer-h4-text: #fff;
-  --footer-bg: linear-gradient(135deg, #64748b 0%, #334155 100%);
-  --copyright: linear-gradient(135deg, #64748b 0%, #334155 100%);
-}*/
 
 .color-secondary{color: var(--color-secondary);}
 /*.theme-black a:hover, .theme-black a:focus, .theme-black {background: var(--theme-black);border-radius: 0.125rem}
@@ -148,7 +130,7 @@
 .theme-peach a:hover, .theme-peach a:focus, .theme-peach {background: var(--theme-peach);border-radius: 0.125rem}
 .theme-aqua a:hover, .theme-aqua a:focus, .theme-aqua {background: var(--theme-aqua);border-radius: 0.125rem}
 .theme-yellow a:hover, .theme-yellow a:focus, .theme-yellow {background: var(--theme-yellow);border-radius: 0.125rem}*/
-
+.gradient-light{background: var(--gradient-light);}
 .color-list {padding: 0;margin: 0;}
 .color-list li {
     display: inline-flex; list-style: none;
@@ -666,6 +648,7 @@ header{transition: var(--transition-5); /*background: var(--header-bg); border-r
 .attoyer-btn:hover {
     background: var(--surface-color);
     color: var(--color-white) !important;
+    text-decoration: none !important;
 }
 .login-btn:focus,
 .login-btn:active,
@@ -2077,7 +2060,7 @@ left:1rem; top:1rem}
     .process {grid-template-columns: repeat(2, 1fr);}
 }
 .login-form .form-control{    
-    color: var(--default-color);
+    color: var(--color-black);
     background-color: var(--input-bg);
     padding: 12px 16px;
     border: 1px solid color-mix(in srgb, var(--input-bg), transparent 90%);
@@ -2133,7 +2116,7 @@ left:1rem; top:1rem}
     align-items: start;
     bottom: 0;
 }
-
+.orbar{width: 80%; margin: 0 auto;}
 .cta-banner {
       background: var(--header-bg);
       border-radius: 0.5rem;
@@ -2361,7 +2344,7 @@ left:1rem; top:1rem}
     .blob-3 {
       width: 220px;
       height: 220px;
-      background: radial-gradient(circle, #3b82f6 0%, transparent 70%);
+      background: radial-gradient(circle, #ffffffdb 0%, #11719d 70%);
       top: 40%;
       left: 30%;
       animation: blobMove3 11s ease-in-out infinite;
