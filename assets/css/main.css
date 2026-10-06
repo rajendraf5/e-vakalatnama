@@ -66,6 +66,8 @@
   --slider-bg:linear-gradient(135deg, #475569 0%, #64748b 100%);
   --slider-after:linear-gradient(180deg, rgb(67 81 102) 0%, rgb(0 0 0 / 0%) 100%);
   --focus-color:#354863;
+  --login-bg-color:linear-gradient(135deg, rgba(13,27,42,0.95) 0%, rgba(29,53,87,0.96) 100%);
+  --input-bg:#c4d4ea;
 }
 
 
@@ -101,6 +103,8 @@
   --slider-bg:linear-gradient(135deg, #263a9d 0%, #0d3490 100%);
   --slider-after:linear-gradient(180deg, #2047a9, rgb(0 0 0 / 0%) 100%);
   --focus-color:#3F51B5;
+  --login-bg-color:linear-gradient(135deg, rgb(34 86 206) 0%, rgb(5 27 89 / 90%) 100%);
+  --input-bg:#b8e6fb;
 }
 
 
@@ -266,7 +270,16 @@ header{transition: var(--transition-5); /*background: var(--header-bg); border-r
 @keyframes slideDown {
     from {transform: translateY(-100%);}
     to{transform: translateY(0);}
-}    
+}   
+.logo-grid-row:hover .logo-grid-group {
+    animation-play-state: paused;
+}
+.logo-grid-group:hover {
+    animation-play-state: paused;
+}
+
+
+
 
 .mobilelogo img{width: 240px;}
 .logo img{ transition: var(--transition-5); margin-top:10px; margin-bottom:10px;}
@@ -658,9 +671,10 @@ header{transition: var(--transition-5); /*background: var(--header-bg); border-r
 .login-btn:active,
 .login-btn:hover{
     color: var(--color-white) !important; background: var(--color-black);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12)   ;
 }
 .login-btn {
-    background: #ddd;
+    background: var(--color-white);
     color: var(--color-black) !important;
     padding: 10px 16px;
     font-weight: 600;
@@ -2064,17 +2078,26 @@ left:1rem; top:1rem}
 }
 .login-form .form-control{    
     color: var(--default-color);
-    background-color: var(--color-white);
+    background-color: var(--input-bg);
     padding: 12px 16px;
-    border: 1px solid color-mix(in srgb, var(--color-black), transparent 90%);
-    border-radius: 0;
+    border: 1px solid color-mix(in srgb, var(--input-bg), transparent 90%);
+    border-radius: 0.5rem;
     box-shadow: none;
     transition: border-color 0.3s ease-out;
 }
+.login-content a{color: var(--color-white);}
+.login-content a:hover{color: var(--color-white); text-decoration: underline;}
 .form-control:focus {
     box-shadow: none;
     border: 1px solid var(--focus-color);
 }
+
+.login-bg-color {
+    position: relative;
+    padding: 40px 40px;
+    background: var(--login-bg-color);
+}
+.loginlogo img{height: 60px}
 .profile-card {
     position: relative;
     overflow: hidden;
@@ -2100,6 +2123,7 @@ left:1rem; top:1rem}
     z-index: 3;
 }
 .login-content{
+    position: relative;
     z-index: 3;
     right: 0;
     top: 0;
@@ -2319,7 +2343,7 @@ left:1rem; top:1rem}
     .blob-1 {
       width: 320px;
       height: 320px;
-      background: radial-gradient(circle, #60a5fa 0%, transparent 70%);
+      background: radial-gradient(circle, #000000 0%, transparent 70%);
       top: -10%;
       right: -15%;
       animation: blobMove1 14s ease-in-out infinite;
@@ -2328,7 +2352,7 @@ left:1rem; top:1rem}
     .blob-2 {
       width: 280px;
       height: 280px;
-      background: radial-gradient(circle, #93c5fd 0%, transparent 70%);
+      background: radial-gradient(circle, #000 0%, transparent 70%);
       bottom: -5%;
       left: -10%;
       animation: blobMove2 16s ease-in-out infinite;
@@ -2420,10 +2444,9 @@ left:1rem; top:1rem}
   }
 
   .modal-left-footer {
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    bottom:0;
+    z-index: 1;
     color: var(--color-white);
-    font-size: 12px;
-    opacity: 0.55;
-    margin-top: 24px;
+    margin-bottom: 24px;
 }

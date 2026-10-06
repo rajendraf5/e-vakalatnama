@@ -25,22 +25,22 @@
     <li class="theme-blue"><a href="#" id="blueBtn" aria-label="blue theme"></a></li>
  </ul>
  <header class="headerfixed">
-    <div class="container">
+    <div class="container-fluid">
         <nav class="navbar navbar-expand-lg justify-content-lg-between pt-0 pb-0">
           <a href="#" class="logo"><img src="assets/images/e-logo.webp" alt="" title="" /></a>
             <div class="menu-bar">
               <div class="menu-bar-content">
                 <div class="main-menu">
                 <ul>
-                  <li><a href="#" class="active">Home</a></li>
+                  <li><a href="#">Home</a></li>
                   <li><a href="#">About Us</a></li>
                   <li><a href="#">Contact Us</a></li>
                   <li><a href="#">Faqs</a></li>
                 </ul>
                 <div class="ms-2 ms-lg-1 ms-xl-5 d-lg-flex gap-2">
                   <a href="login.html" class="login-btn mb-lg-0 mb-2"><i class="bi bi-box-arrow-in-right me-2"></i>Login</a>
-                  <a href="#" class="attoyer-btn mb-lg-0 mb-2"><i class="bi bi-person-fill me-2"></i>Sign Up</a>
-               </div>  
+                  <a href="signup.html" class="attoyer-btn mb-lg-0 mb-2"><i class="bi bi-person-fill me-2"></i>Sign Up</a>
+               </div>   
               </div>
             <button class="mobile-menu-btn">
               <span></span>
@@ -87,53 +87,20 @@
   </header>
 
 
-   <!-- <section class="breadcum bg-cover-center" style="background-image: url(assets/images/login.webp);">
-    <div class="container">
-      <div class="breadcum-content d-flex justify-content-between flex-wrap">
-          <h2>My Account</h2>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li>Login</li>
-          </ul>
-      </div>
-    </div>
-  </section> -->
-
 
 <section class="bg-light pt-5 pb-5">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row justify-content-center">
-      <div class="col-12 col-xxl-12 col-lg-12">
-        <div class="card border-light-subtle shadow-sm overflow-hidden">
-          <div class="row g-0">
-            <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 order-lg-first order-last">
-
-              <div class="profile-card h-100 shadow-lg w-100 overview-image loginbg  position-relative rounded-0">
-                                   <!-- <img src="assets/images/login-bg.webp" alt="" title="">    -->
+      <div class="col-12 col-xxl-6 col-lg-6">
+        <div class="card border-light-subtle shadow-sm overflow-hidden rounded-5">
+  
+              <div class="login-bg-color h-100 shadow-lg position-relative rounded-0">
+                <!-- <div class="loginlogo pb-2 pb-lg-5"><img src="assets/images/e-logo.webp" class="img-fluid" alt="" title=""></div>    -->
                   <div class="text-white login-content flex-column">
-                    <h2 class="fw-bold">File. Sign. Submit. All digitally.</h2>
-                    <p>Secure platform for legal professionals to manage, sign and file Vakalatnamas with complete clarity and control.</p>
-                  </div>
-                    <div class="bg-layer">
-                      <div class="bg-gradient"></div>
-                      <div class="blob blob-1"></div>
-                      <div class="blob blob-2"></div>
-                      <div class="blob blob-3"></div>
-                      <div class="blob blob-4"></div>
-                      <div class="grid-overlay"></div>
-                      <div class="ray ray-1"></div>
-                      <div class="ray ray-2"></div>
-                      <div class="ray ray-3"></div>
-                    </div>
-                <div class="modal-left-footer">Secure · Fast · Paperless</div>    
-              </div>
-            </div>
-            <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12 d-flex align-items-center justify-content-center order-lg-last order-first">
-              <div class="col-12 col-lg-11 col-xl-10 px-4 py-5">
-                  <div class="card-body">
+                    <div class="card-body w-100">
                     <div class="mb-3 mb-lg-5">
-                      <h3 class="fw-bold mb-2">Sign in to e-Vakalatnama</h3>
-                      <p class="text-secondary mb-0">Enter your credentials to access your workspace.</p>
+                      <h3 class="fw-bold mb-2 text-white">Sign in to e-Vakalatnama</h3>
+                      <p class="text-white mb-0">Enter your credentials to access your workspace.</p>
                     </div>
                     <form method="post" action="" class="login-form">
                       <div class="mb-4">
@@ -144,7 +111,7 @@
                       <div class="mb-3">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                           <label for="password" class="form-label fw-semibold mb-0">Password</label>
-                          <a href="forget_password.html" class="small text-decoration-underline fw-semibold link-offset-3 link-underline-warning">
+                          <a href="forget_password.html" class="small fw-semibold">
                             Forgot Password?
                           </a>
                         </div>
@@ -181,7 +148,7 @@
                         </div>
 
                         <div class="col-12 col-md-6">
-                          <a href="#!"class="btn attoyer-btn w-100 py-3 fw-bold">
+                          <a href="login_otp.html"class="btn attoyer-btn w-100 py-3 fw-bold">
                             <i class="bi bi-phone me-2"></i>Login with OTP
                           </a>
                         </div>
@@ -189,19 +156,31 @@
                     </form>
 
                     <div class="d-flex align-items-center my-4">
-                      <div class="flex-grow-1 border-top"></div>
-                      <span class="px-3 text-secondary small">OR</span>
-                      <div class="flex-grow-1 border-top"></div>
+                      <div class="flex-grow-1 border-top border-white"></div>
+                      <span class="px-3 text-white small">OR</span>
+                      <div class="flex-grow-1 border-top border-white"></div>
                     </div>
 
                     <div class="text-center small">
-                      <span class="text-secondary">Don't have an account?</span>
-                      <a href="signup.html" class="text-decoration-underline fw-semibold ms-1 link-offset-3 link-underline-warning">Create New Account</a>
+                      <span class="text-white">Don't have an account?</span>
+                      <a href="signup.html" class="fw-semibold ms-1">Create New Account</a>
                     </div>
                   </div>
+                  </div>
+                    <div class="bg-layer">
+                      <div class="bg-gradient"></div>
+                      <div class="blob blob-1"></div>
+                      <div class="blob blob-2"></div>
+                      <div class="blob blob-3"></div>
+                      <div class="blob blob-4"></div>
+                      <div class="grid-overlay"></div>
+                      <div class="ray ray-1"></div>
+                      <div class="ray ray-2"></div>
+                      <div class="ray ray-3"></div>
+                    </div>
+   
               </div>
-            </div>
-          </div>
+           
         </div>
       </div>
     </div>
