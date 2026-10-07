@@ -70,6 +70,7 @@
   --input-bg:#fff;
   --gradient-light:linear-gradient(135deg, #e2e8f0 30%, color-mix(in srgb, #e2e8f0, transparent 0%) 20%);
   --theme-button:#0432ab;
+  --heading-slider:#3965db;
 }
 
 
@@ -114,6 +115,7 @@
   --input-bg:#fff;
   --gradient-light:linear-gradient(135deg, #e2e8f0 30%, color-mix(in srgb, #e2e8f0, transparent 0%) 20%);
   --theme-button:linear-gradient(135deg, #3f4d61 0%, #334155 100%);
+  --heading-slider:#546379;
 }
 
 .color-secondary{color: var(--color-secondary);}
@@ -1061,8 +1063,8 @@ footer{padding-top: 2.5rem;background: var(--footer-bg);}
 
 .slider-one__title {
     margin: 0;
-    color: var(--color-white);
-    font-weight: 700;
+    color: var(color-white);
+    font-weight: 900;
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
     -webkit-animation-fill-mode: both;
@@ -1071,6 +1073,7 @@ footer{padding-top: 2.5rem;background: var(--footer-bg);}
     backface-visibility: visible !important;
     /*text-shadow:0px 3px 5px rgb(0 0 0 / 44%);*/
 }
+.slider-one__title span{color: var(--heading-slider);}
 .slider-content{position: absolute;color: var(--color-white);}
 .slider-content {
     -webkit-animation-name: fadeInDown;
