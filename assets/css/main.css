@@ -41,14 +41,14 @@
   --menu-color: #fff;
   --color-primary: #2563eb;
   --bs-card: rgba(219, 234, 254, 0.85);
-  --bs-card-icon:#3F51B5;
+  --bs-card-icon:#000;
   --bd-card-hover-border:rgb(5 150 105 / 75%);
   --bs-primary-bg: #2045a4;
   --bs-card-bg: linear-gradient(135deg, #eff6ff, #dbeafe);
   --step-shadow: 0 4px 16px rgba(37, 99, 235, 0.20);
   --step-shadow-hover: 0 8px 25px rgba(37, 99, 235, 0.35);
   --step-number-bg: linear-gradient(135deg, #2563eb, #1d4ed8);
-  --header-bg: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%);
+  --header-bg: linear-gradient(135deg, #2462eb 0%, #1349be 100%);
   --bs-card-hover: #1e3a8a;
   --sub-title: #1d4ed8;
   --bs-card-text-color: #111827;
@@ -66,9 +66,10 @@
   --slider-bg:linear-gradient(135deg, #263a9d 0%, #0d3490 100%);
   --slider-after:linear-gradient(180deg, #2047a9, rgb(0 0 0 / 0%) 100%);
   --focus-color:#3F51B5;
-  --login-bg-color:linear-gradient(135deg, rgb(34 86 206) 0%, rgb(1 20 75 / 90%) 100%);
+  --login-bg-color:linear-gradient(135deg, #2563eb 0%, rgb(15 83 232) 100%);
   --input-bg:#fff;
   --gradient-light:linear-gradient(135deg, #e2e8f0 30%, color-mix(in srgb, #e2e8f0, transparent 0%) 20%);
+  --theme-button:#0432ab;
 }
 
 
@@ -112,6 +113,7 @@
   --login-bg-color:linear-gradient(135deg, rgba(13,27,42,0.95) 0%, rgba(29,53,87,0.96) 100%);
   --input-bg:#fff;
   --gradient-light:linear-gradient(135deg, #e2e8f0 30%, color-mix(in srgb, #e2e8f0, transparent 0%) 20%);
+  --theme-button:linear-gradient(135deg, #3f4d61 0%, #334155 100%);
 }
 
 .color-secondary{color: var(--color-secondary);}
@@ -612,7 +614,7 @@ header{transition: var(--transition-5); /*background: var(--header-bg); border-r
 }
 
 .attoyer-btn {
-    background: var(--surface-color);
+    background: var(--theme-button);
     color: var(--color-white);
     padding: 10px 16px;
     font-weight: 600;
@@ -654,7 +656,8 @@ header{transition: var(--transition-5); /*background: var(--header-bg); border-r
 .login-btn:active,
 .login-btn:hover{
     color: var(--color-white) !important; background: var(--color-black);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12)   ;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    text-decoration: none !important;
 }
 .login-btn {
     background: var(--color-white);
@@ -2063,7 +2066,7 @@ left:1rem; top:1rem}
     color: var(--color-black);
     background-color: var(--input-bg);
     padding: 12px 16px;
-    border: 1px solid color-mix(in srgb, var(--input-bg), transparent 90%);
+    border: 2px solid color-mix(in srgb, var(--input-bg), transparent 90%);
     border-radius: 0.5rem;
     box-shadow: none;
     transition: border-color 0.3s ease-out;
@@ -2072,7 +2075,8 @@ left:1rem; top:1rem}
 .login-content a:hover{color: var(--color-white); text-decoration: underline;}
 .form-control:focus {
     box-shadow: none;
-    border: 1px solid var(--focus-color);
+    border: 2px solid var(--focus-color);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
 }
 
 .login-bg-color {

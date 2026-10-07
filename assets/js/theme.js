@@ -1,18 +1,15 @@
 (function ($) {
-
-    "use strict";
-
+  "use strict";
   new PureCounter();
-jQuery(window).scroll(function () {
-  if (jQuery(window).scrollTop() >= 300) {
-    jQuery('.headerfixed').addClass('is-sticky');
-  } else {
-    jQuery('.headerfixed').removeClass('is-sticky');
-  }
-});
+    jQuery(window).scroll(function () {
+      if (jQuery(window).scrollTop() >= 300) {
+        jQuery('.headerfixed').addClass('is-sticky');
+      } else {
+        jQuery('.headerfixed').removeClass('is-sticky');
+      }
+    });
 
 // Mobile Navigation
-
   let scrollTop = document.querySelector('.scroll-top');
   function toggleScrollTop() {
     if (scrollTop) {
@@ -29,8 +26,6 @@ jQuery(window).scroll(function () {
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
-
-  
         if ($('.slider-one__carousel').length) {
             var slideOneWrap = $('.slider-one');
             var slideOneCarousel = $('.slider-one__carousel').owlCarousel({
@@ -57,8 +52,6 @@ jQuery(window).scroll(function () {
                 e.preventDefault();
             });
         }
-
-
 
               
    // Clients carousel (uses the Owl Carousel library)
