@@ -216,7 +216,7 @@ header{transition: var(--transition-5); /*background: var(--header-bg); border-r
     white-space: nowrap;
     position: relative;
     display: flex;
-    background: var(--surface-color);
+    background: var(--login-bg-color);
     padding-top: 0.85rem;
     padding-bottom: 0.85rem;
     z-index: 1;
