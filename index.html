@@ -502,91 +502,7 @@
   </section>
 
 
-  <div class="pt-5 pb-5 d-none">
-    <div class="container">
-      <div class="row">
-        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 text-center pb-5">
-          <h4 class="sub-title">6 Step Process</h4>
-          <h2 class="heading-title">Application Process</h2>
-          <!-- <div class="divider-line"></div> -->
-        </div>
-      </div>
-      <div class="process">
-      <!-- Step 1 -->
-      <div class="step">
-        <div class="step-number">01</div>
-        <div class="step-card">
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </div>
-          <p class="step-label">Case &amp; Parties</p>
-          <p class="step-desc">Add case details</p>
-        </div>
-      </div>
-
-      <!-- Step 2 -->
-      <div class="step">
-        <div class="step-number">02</div>
-        <div class="step-card">
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          </div>
-          <p class="step-label">Advocates</p>
-          <p class="step-desc">Assign advocates</p>
-        </div>
-      </div>
-
-      <!-- Step 3 -->
-      <div class="step">
-        <div class="step-number">03</div>
-        <div class="step-card">
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-          </div>
-          <p class="step-label">Preview &amp; Edit</p>
-          <p class="step-desc">Review &amp; changes</p>
-        </div>
-      </div>
-
-      <!-- Step 4 -->
-      <div class="step">
-        <div class="step-number">04</div>
-        <div class="step-card">
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><path d="M1 10h22"></path></svg>
-          </div>
-          <p class="step-label">Pay</p>
-          <p class="step-desc">Secure payment</p>
-        </div>
-      </div>
-
-      <!-- Step 5 -->
-      <div class="step">
-        <div class="step-number">05</div>
-        <div class="step-card">
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path></svg>
-          </div>
-          <p class="step-label">Sign</p>
-          <p class="step-desc">Digital signature</p>
-        </div>
-      </div>
-
-      <!-- Step 6 -->
-      <div class="step">
-        <div class="step-number">06</div>
-        <div class="step-card">
-          <div class="step-icon">
-            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          </div>
-          <p class="step-label">Done</p>
-          <p class="step-desc">Completed</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+ 
    <!-- <section class="parallex space-top space-bottom common-faqs" style="background-image: url('assets/images/libery.jpg')">
     <div class="container">
       <div class="row">
@@ -742,50 +658,144 @@
   <script type="text/javascript"src="assets/js/translate.js"></script>
   <script type="text/javascript"src="assets/js/translate-language.js"></script>
   <script>
-    const steps = document.querySelectorAll('.step');
-    const progress = document.getElementById('progress');
-    const total = steps.length;
-    let i = 0;
+  
+document.addEventListener("DOMContentLoaded", function () {
 
-    function showNext() {
-      if (i >= total) {
-        // restart after pause
-        setTimeout(() => {
-          steps.forEach(s => {
-            s.classList.remove('visible', 'active', 'completed');
-            s.querySelector('.step-card').classList.remove('visible');
-          });
-          progress.style.width = '0%';
-          i = 0;
-          setTimeout(showNext, 400);
-        }, 2500);
-        return;
+  const steps = document.querySelectorAll(".step");
+  const progress = document.getElementById("progress");
+
+  const total = steps.length;
+
+  let currentStep = 0;
+
+  const STEP_TIME = 1400;
+  const CARD_DELAY = 250;
+  const RESTART_DELAY = 2500;
+
+
+  function resetTimeline() {
+
+    steps.forEach(step => {
+
+      step.classList.remove(
+        "visible",
+        "active",
+        "completed"
+      );
+
+      const card = step.querySelector(".step-card");
+
+      if (card) {
+        card.classList.remove("visible");
       }
 
-      const step = steps[i];
-      const card = step.querySelector('.step-card');
+    });
 
-      // show circle first
-      step.classList.add('visible', 'active');
-      if (i > 0) steps[i - 1].classList.remove('active');
-      if (i > 0) steps[i - 1].classList.add('completed');
+    progress.style.width = "0%";
 
-      // progress line
-      const pct = (i / (total - 1)) * 100;
-      progress.style.width = pct + '%';
+    currentStep = 0;
+  }
 
-      // then show card after short delay
+
+  function animateStep(index) {
+
+    if (index >= total) {
+
       setTimeout(() => {
-        card.classList.add('visible');
-      }, 280);
 
-      i++;
-      setTimeout(showNext, 900);
+        resetTimeline();
+
+        setTimeout(() => {
+          animateStep(0);
+        }, 500);
+
+      }, RESTART_DELAY);
+
+      return;
     }
 
-    window.addEventListener('load', () => {
-      setTimeout(showNext, 500);
-    });
+
+    const current = steps[index];
+
+    const card = current.querySelector(".step-card");
+
+
+    /* --------------------------------
+       Show current circle
+    -------------------------------- */
+
+    current.classList.add(
+      "visible",
+      "active"
+    );
+
+
+    /* --------------------------------
+       Show current card
+    -------------------------------- */
+
+    setTimeout(() => {
+
+      if (card) {
+        card.classList.add("visible");
+      }
+
+    }, CARD_DELAY);
+
+
+    /* --------------------------------
+       Move progress line
+    -------------------------------- */
+
+    setTimeout(() => {
+
+      const percentage =
+        (index / (total - 1)) * 100;
+
+      progress.style.width =
+        percentage + "%";
+
+    }, CARD_DELAY + 150);
+
+
+    /* --------------------------------
+       Complete previous step
+    -------------------------------- */
+
+    if (index > 0) {
+
+      const previous = steps[index - 1];
+
+      previous.classList.remove("active");
+
+      previous.classList.add("completed");
+    }
+
+
+    /* --------------------------------
+       Next step
+    -------------------------------- */
+
+    currentStep++;
+
+    setTimeout(() => {
+
+      animateStep(currentStep);
+
+    }, STEP_TIME);
+  }
+
+
+  /* Start animation */
+
+  setTimeout(() => {
+
+    animateStep(0);
+
+  }, 500);
+
+});
+
   </script>
 </body>
 </html>
