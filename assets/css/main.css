@@ -166,7 +166,7 @@ h6 {
 }
 .bs-default-bg{ /*background: var(--bs-default-bg);*/ background: linear-gradient(115deg, var(--accent-color2), color-mix(in srgb, var(--accent-color2), var(--danger-color) 55%))}
 .bs-theme-bg{background: #fffcee}
-.logo img{height: 85px; }
+.logo img{height: 65px; }
 .topbar{background: var(--bs-top-bg);}
 /*.topbar:before{background: linear-gradient(90deg, var(--e-global-color-primary) 0%, #D86A7C4D 29%);
     opacity: var(--overlay-opacity);
