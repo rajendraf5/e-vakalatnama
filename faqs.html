@@ -31,7 +31,7 @@
                   <li><a href="index.html">Home</a></li>
                   <li><a href="about.html">About Us</a></li>
                   <li><a href="contact.html">Contact Us</a></li>
-                  <li><a href="faqs.html">Faqs</a></li>
+                  <li><a href="faqs.html" class="active">Faqs</a></li>
                 </ul>
                 <div class="ms-2 me-lg-0 me ms-lg-1 ms-xl-5 d-lg-flex d-block gap-2 me-lg-0 me-2">
                   <a href="login.html" class="login-btn mb-lg-0 mb-2">Login</a>
@@ -81,89 +81,73 @@
     </div>
   </header>
 
-   <!-- <section class="breadcum bg-cover-center" style="background-image: url(assets/images/login.webp);">
+  <section class="breadcum">
     <div class="container">
       <div class="breadcum-content d-flex justify-content-between flex-wrap">
-          <h2>My Account</h2>
+          <h2>Faqs</h2>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li>Login</li>
+            <li><a href="index.html">Home</a></li>
+            <li>Faqs</li>
           </ul>
       </div>
     </div>
-  </section> -->
+  </section>
 
-<section class="gradient-light pt-5 pb-5">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12  col-xxl-5 col-xl-5 col-lg-5 col-md-12">
-        <div class="card rounded-5 p-1 shadow-lg">
-              <div class="login-bg-color h-100 shadow-lg position-relative rounded-5">
-                 <div class="text-white login-content flex-column">
-                     <div class="card-body w-100">
-                    <div class="mb-3 mb-lg-5">
-                      <h3 class="fw-bold mb-2">Login to Account (OTP)</h3>
-                      <p class="mb-0">Enter your registered mobile number or OTP to continue</p>
-                    </div>
-
-                    <form action="#" class="login-form">
-                      <div class="mb-4">
-                        <label for="identifier" class="form-label fw-semibold">Mobile or Email</label>
-                        <div class="input-group">
-                          <input
-                            id="identifier"
-                            class="form-control"
-                            name="identifier"
-                            placeholder="Enter mobile or email"
-                            type="text"
-                          />
-                          <button class="attoyer-btn px-3" type="button">Get OTP</button>
-                        </div>
-                      </div>
-                      <div class="mb-3">
-                          <label for="password" class="form-label fw-semibold">OTP</label>
-                          <input class="form-control" type="text" name="otp" placeholder="Enter OTP">
-                      </div>  
-
-                      <div class="row g-3">
-                        <div class="col-12 col-md-12">
-                          <button type="submit" class="btn attoyer-btn w-100 py-3 fw-bold">Verify OTP
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-
-                    <div class="d-flex align-items-center my-4 orbar">
-                      <div class="flex-grow-1 border-top border-white"></div>
-                      <span class="px-3 text-white small">OR</span>
-                      <div class="flex-grow-1 border-top border-white"></div>
-                    </div>
-
-                    <div class="text-center small">
-                      <span>Don't have an account?</span>
-                      <a href="signup.html" class="fw-bold ms-1 link-offset-3 link-underline-white">Create New Account</a>
-                    </div>
-                  </div>
-                  </div>
-                    <div class="bg-layer">
-                      <div class="bg-gradient"></div>
-                      <div class="blob blob-1"></div>
-                      <div class="blob blob-2"></div>
-                      <div class="blob blob-3"></div>
-                      <div class="blob blob-4"></div>
-                      <div class="grid-overlay"></div>
-                      <div class="ray ray-1"></div>
-                      <div class="ray ray-2"></div>
-                      <div class="ray ray-3"></div>
-                    </div>   
+ 
+   <section class="gradient-light pt-5 pb-5 common-faqs">
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
+          <h2 class="heading-title pb-4">Frequently Asked Questions</h2>
+          <ul class="accordion" id="commonFaqAccordion">
+            <li>
+              <button class="faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">What is a Digital Vakalatnama?
+              <span></span></button>
+              <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#commonFaqAccordion">
+                <div class="faq-content-body">
+                    <p>A Digital Vakalatnama is an electronically generated, signed, and submitted power of attorney that allows an advocate to represent a client in court. It is legally valid, secure, and accepted across courts.</p>
+                </div>
               </div>
-            </div>
+            </li>
+            <li>
+                <button class="faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">Is a Digital Vakalatnama legally valid?<span></span></button>
+                <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#commonFaqAccordion">
+                  <div class="faq-content-body">
+                    <p>Yes. It is created with blockchain-verified timestamps and secure digital signatures, making it immutable, tamper-proof, and fully compliant with legal requirements.</p>
+                  </div>
+               </div>
+            </li>
+            <li>
+              <button class="faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">Do I need any special software or device?<span></span></button>
+              <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#commonFaqAccordion">
+                <div class="faq-content-body">
+                  <p>No. The platform works on any smartphone or computer with an internet connection. No extra software is required.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <button class="faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">Can I track the status of my Vakalatnama?<span></span></button>
+              <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#commonFaqAccordion">
+                <div class="faq-content-body">
+                  <p>Yes. You receive real-time updates and can track the status of your document from generation to final submission.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <button class="faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">How is my data kept secure?<span></span></button>
+              <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#commonFaqAccordion">
+                <div class="faq-content-body">
+                  <p>All client information and documents are protected with bank-grade 256-bit encryption. Privacy and security are built into the platform from the ground up.</p>
+                </div>
+              </div>
+            </li>
+          </ul> 
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-  <footer>
+  </section>
+  
+   <footer>
     <div class="container">
       <div class="row">
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-12">

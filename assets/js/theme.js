@@ -66,4 +66,142 @@
   });
 
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const steps = document.querySelectorAll(".step");
+  const progress = document.getElementById("progress");
+
+  const total = steps.length;
+
+  let currentStep = 0;
+
+  const STEP_TIME = 1400;
+  const CARD_DELAY = 250;
+  const RESTART_DELAY = 2500;
+
+
+  function resetTimeline() {
+
+    steps.forEach(step => {
+
+      step.classList.remove(
+        "visible",
+        "active",
+        "completed"
+      );
+
+      const card = step.querySelector(".step-card");
+
+      if (card) {
+        card.classList.remove("visible");
+      }
+
+    });
+
+    progress.style.width = "0%";
+
+    currentStep = 0;
+  }
+
+
+  function animateStep(index) {
+
+    if (index >= total) {
+
+      setTimeout(() => {
+
+        resetTimeline();
+
+        setTimeout(() => {
+          animateStep(0);
+        }, 500);
+
+      }, RESTART_DELAY);
+
+      return;
+    }
+
+
+    const current = steps[index];
+
+    const card = current.querySelector(".step-card");
+
+
+    /* --------------------------------
+       Show current circle
+    -------------------------------- */
+
+    current.classList.add(
+      "visible",
+      "active"
+    );
+
+
+    /* --------------------------------
+       Show current card
+    -------------------------------- */
+
+    setTimeout(() => {
+
+      if (card) {
+        card.classList.add("visible");
+      }
+
+    }, CARD_DELAY);
+
+
+    /* --------------------------------
+       Move progress line
+    -------------------------------- */
+
+    setTimeout(() => {
+
+      const percentage =
+        (index / (total - 1)) * 100;
+
+      progress.style.width =
+        percentage + "%";
+
+    }, CARD_DELAY + 150);
+
+
+    /* --------------------------------
+       Complete previous step
+    -------------------------------- */
+
+    if (index > 0) {
+
+      const previous = steps[index - 1];
+
+      previous.classList.remove("active");
+
+      previous.classList.add("completed");
+    }
+
+
+    /* --------------------------------
+       Next step
+    -------------------------------- */
+
+    currentStep++;
+
+    setTimeout(() => {
+
+      animateStep(currentStep);
+
+    }, STEP_TIME);
+  }
+
+
+  /* Start animation */
+
+  setTimeout(() => {
+
+    animateStep(0);
+
+  }, 500);
+
+});
 })(jQuery);
