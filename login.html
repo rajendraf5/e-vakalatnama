@@ -88,37 +88,58 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12  col-xxl-5 col-xl-5 col-lg-5 col-md-12">
-        <div class="card rounded-5 p-1 shadow-lg">
-              <div class="login-bg-color h-100 shadow-lg position-relative rounded-5">
+        <div class="card rounded-5 shadow-lg">
+          <div class="login-bg-color h-100 shadow-lg position-relative rounded-5">
+            <div class="shape shape-top" aria-hidden="true"></div>
+            <div class="shape shape-top-light" aria-hidden="true"></div>
+              <div class="shape shape-top-glass" aria-hidden="true"></div>
+              <div class="shape shape-bottom-left" aria-hidden="true"></div>
+              <div class="shape shape-bottom-mid" aria-hidden="true"></div>
+              <div class="shape shape-bottom-blue" aria-hidden="true"></div>
+              <div class="shape shape-bottom-right" aria-hidden="true"></div>
+              <div class="shape shape-bottom-right-accent" aria-hidden="true"></div>
+
+              
                   <div class="text-white login-content flex-column">
                     <div class="card-body w-100">
-                    <div class="mb-3 mb-lg-5">
-                      <h3 class="fw-bold mb-2 text-white">Sign in to e-Vakalatnama</h3>
-                      <p class="text-white mb-0">Enter your credentials to access your workspace.</p>
+                    <div class="login-heading mb-3 mb-lg-5">
+                        <h3>Sign in to</h3>
+                        <p class="brand-name">e-Vakalatnama</p>
+                        <p class="logintitle">Enter your credentials to access your workspace.</p>
+                        <div class="heading-line" aria-hidden="true"></div>
                     </div>
                     <form method="post" action="" class="login-form">
-                      <div class="mb-4">
-                        <label for="identifier" class="form-label fw-semibold">Mobile or Email</label>
-                        <input class="form-control" name="identifier" placeholder="Enter mobile or email" type="text" value="" required="required" />
+                      <div >
+                        <label for="identifier" class="form-label">Mobile or Email</label>
+                        <div class="input-box">
+                          <span class="input-icon"><i class="bi bi-person"></i></span>
+                          <input type="text" placeholder="Enter mobile or email">
+                        </div>
+                        <i class="bi bi-lock"></i>
+                        <!-- <input class="form-control" name="identifier" placeholder="Enter mobile or email" type="text" value="" required="required" /> -->
                        <div class="invalid-feedback">Please enter your mobile or email.</div>
                       </div>
                       <div class="mb-3">
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                          <label for="password" class="form-label fw-semibold mb-0">Password</label>
-                          <a href="forget_password.html" class="small fw-bold link-offset-3 link-underline-white">
+                          <label for="password" class="form-label mb-0">Password</label>
+                          <a href="forget_password.html" class="password-row fw-bold link-offset-3 link-underline-dark">
                             Forgot Password?
                           </a>
                         </div>
                         <div class="mb-3">
-                          <input
+
+                        <div class="input-box">
+                          <span class="input-icon"><i class="bi bi-lock"></i></span>
+                           <input
                             id="password"
-                            class="form-control"
                             type="password"
                             name="password"
                             placeholder="Enter password"
                             autocomplete="current-password"
                             required="required"
                           />
+                        </div>
+                         
                           <div class="invalid-feedback">Please enter your password.</div>
                         </div>
                       </div>
@@ -126,7 +147,7 @@
 
                       <div class="form-check mb-4">
                         <input
-                          class="form-check-input"
+                          class="form-check-input border border-blue"
                           type="checkbox"
                           id="rememberMe"
                           required="required"
@@ -136,26 +157,26 @@
 
                       <div class="row g-3">
                         <div class="col-12 col-md-6">
-                          <button type="submit" class="btn attoyer-btn w-100 py-3 fw-bold">Sign In
+                          <button type="submit" class="button-all login-primary">Sign In
                           </button>
                         </div>
 
                         <div class="col-12 col-md-6">
-                          <a href="login_otp.html"class="btn login-btn w-100 py-3 fw-bold">Login with OTP
+                          <a href="login_otp.html"class="button-all login-secondary">Login with OTP
                           </a>
                         </div>
                       </div>
                     </form>
 
                     <div class="d-flex align-items-center my-4 orbar">
-                      <div class="flex-grow-1 border-top border-white"></div>
-                      <span class="px-3 text-white small">OR</span>
-                      <div class="flex-grow-1 border-top border-white"></div>
+                      <div class="flex-grow-1 border-top border-blue"></div>
+                      <span class="px-3 text-blue small">OR</span>
+                      <div class="flex-grow-1 border-top border-blue"></div>
                     </div>
 
-                    <div class="text-center small">
-                      <span class="text-white">Don't have an account?</span>
-                      <a href="signup.html" class="fw-bold ms-1 link-offset-3">Create New Account</a>
+                    <div class="text-center small fw-bold">
+                      <span class="text-black">Don't have an account?</span>
+                      <a href="signup.html" class="fw-bold password-row ms-1 link-offset-3">Create New Account</a>
                     </div>
                   </div>
                   </div>
